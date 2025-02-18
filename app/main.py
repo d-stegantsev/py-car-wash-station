@@ -26,6 +26,8 @@ class CarWashStation:
         return income
 
     def calculate_washing_price(self, cars: list) -> float:
+        if not isinstance(cars, list):
+            cars = [cars]
         sum_ = 0
         for car in cars:
             sum_ += round(car.comfort_class
